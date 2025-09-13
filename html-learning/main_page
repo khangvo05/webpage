@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your App Name - Documentation</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --primary: #2d5bff;
+            --primary-dark: #1a49cc;
+            --secondary: #6c757d;
+            --light: #f8f9fa;
+            --dark: #343a40;
+            --success: #28a745;
+            --code-bg: #272822;
+            --border-radius: 8px;
+            --box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            --transition: all 0.3s ease;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f5f7ff;
+            padding-bottom: 2rem;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 1.5rem;
+        }
+
+        header {
+            background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+            color: white;
+            padding: 2rem 0;
+            text-align: center;
+            margin-bottom: 2rem;
+            border-radius: 0 0 var(--border-radius) var(--border-radius);
+            box-shadow: var(--box-shadow);
+        }
+
+        .logo {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .subtitle {
+            font-size: 1.2rem;
+            opacity: 0.9;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .download-section {
+            text-align: center;
+            margin: 2rem 0;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 0.8rem 1.5rem;
+            background-color: var(--primary);
+            color: white;
+            text-decoration: none;
+            border-radius: var(--border-radius);
+            font-weight: 600;
+            transition: var(--transition);
+            border: none;
+            cursor: pointer;
+            box-shadow: var(--box-shadow);
+        }
+
+        .btn:hover {
+            background-color: var(--primary-dark);
+            transform: translateY(-2px);
+        }
+
+        .btn-large {
+            font-size: 1.2rem;
+            padding: 1rem 2rem;
+        }
+
+        .features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.5rem;
+            margin: 2rem 0;
+        }
+
+        .feature-card {
+            background: white;
+            padding: 1.5rem;
+            border-radius: var(--border-radius);
+            box-shadow: var(--box-shadow);
+            transition: var(--transition);
+        }
+
+        .feature-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .feature-icon {
+            font-size: 2rem;
+            color: var(--primary);
+            margin-bottom: 1rem;
+        }
+
+        section {
+            margin: 3rem 0;
+        }
+
+        h2 {
+            font-size: 2rem;
+            margin-bottom: 1.5rem;
+            color: var(--primary-dark);
+            padding-bottom: 0.5rem;
+            border-bottom: 2px solid var(--primary);
+        }
+
+        h3 {
+            font-size: 1.5rem;
+            margin: 1.5rem 0 1rem;
+            color: var(--dark);
+        }
+
+        .command {
+            background: var(--code-bg);
+            color: #f8f8f2;
+            padding: 1.5rem;
+            border-radius: var(--border-radius);
+            margin: 1rem 0;
+            overflow-x: auto;
+            font-family: 'Fira Code', monospace;
+        }
+
+        .param {
+            color: #a6e22e;
+        }
+
+        .flag {
+            color: #fd971f;
+        }
+
+        .comment {
+            color: #75715e;
+        }
+
+        .usage-example {
+            background: white;
+            border-left: 4px solid var(--primary);
+            padding: 1rem 1.5rem;
+            margin: 1.5rem 0;
+            border-radius: 0 var(--border-radius) var(--border-radius) 0;
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 3rem;
+            padding: 2rem 0;
+            color: var(--secondary);
+        }
+
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2rem;
+            }
+            
+            .features {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <i class="fas fa-rocket"></i>
+            </div>
+            <h1>Your App Name</h1>
+            <p class="subtitle">A powerful Python-based application that simplifies your workflow with easy-to-use commands and extensive customization options.</p>
+        </div>
+    </header>
+
+    <div class="container">
+        <section class="download-section">
+            <h2>Get Started Now</h2>
+            <p>Download the latest version and start using our application today</p>
+            <a href="#" class="btn btn-large">
+                <i class="fas fa-download"></i> Download Now
+            </a>
+        </section>
+
+        <section class="features">
+            <div class="feature-card">
+                <div class="feature-icon">
+                    <i class="fas fa-bolt"></i>
+                </div>
+                <h3>Fast & Efficient</h3>
+                <p>Optimized for performance with minimal resource usage, even for complex operations.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">
+                    <i class="fas fa-cogs"></i>
+                </div>
+                <h3>Highly Configurable</h3>
+                <p>Customize every aspect with simple command-line parameters and configuration files.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">
+                    <i class="fas fa-shield-alt"></i>
+                </div>
+                <h3>Secure & Reliable</h3>
+                <p>Built with security in mind and tested extensively for production environments.</p>
+            </div>
+        </section>
+
+        <section id="installation">
+            <h2>Installation</h2>
+            <p>To install the application, follow these simple steps:</p>
+            <div class="command">
+                <span class="comment"># Clone the repository</span><br>
+                git clone https://github.com/yourusername/your-app-name.git<br><br>
+                
+                <span class="comment"># Navigate to the directory</span><br>
+                cd your-app-name<br><br>
+                
+                <span class="comment"># Install dependencies</span><br>
+                pip install -r requirements.txt<br><br>
+                
+                <span class="comment"># Run the application</span><br>
+                python main.py
+            </div>
+        </section>
+
+        <section id="usage">
+            <h2>Usage</h2>
+            <p>Our application provides a command-line interface with various options. The basic syntax is:</p>
+            <div class="command">
+                python main.py <span class="param">[OPTIONS]</span> <span class="flag">[FLAGS]</span>
+            </div>
+            
+            <h3>Basic Command</h3>
+            <p>Run a basic operation with default parameters:</p>
+            <div class="command">
+                python main.py process <span class="param">input_file.txt</span> <span class="flag">--output</span> <span class="param">output_file.txt</span>
+            </div>
+            
+            <div class="usage-example">
+                <strong>Example:</strong><br>
+                <code>python main.py process data.csv --output processed_data.csv</code>
+            </div>
+            
+            <h3>Advanced Command</h3>
+            <p>Run with advanced configuration and custom parameters:</p>
+            <div class="command">
+                python main.py analyze <span class="param">input_file.txt</span> <span class="flag">--mode</span> <span class="param">detailed</span> <span class="flag">--format</span> <span class="param">json</span> <span class="flag">--verbose</span>
+            </div>
+            
+            <div class="usage-example">
+                <strong>Example:</strong><br>
+                <code>python main.py analyze log.txt --mode detailed --format json --verbose</code>
+            </div>
+        </section>
+
+        <section id="parameters">
+            <h2>Parameter Reference</h2>
+            
+            <h3>Input Parameters</h3>
+            <div class="command">
+                <span class="flag">--input</span>, <span class="flag">-i</span> <span class="param">PATH</span><br>
+                <span class="comment"># Specifies the input file path (required)</span>
+            </div>
+            
+            <div class="command">
+                <span class="flag">--output</span>, <span class="flag">-o</span> <span class="param">PATH</span><br>
+                <span class="comment"># Specifies the output file path (default: output.txt)</span>
+            </div>
+            
+            <h3>Processing Parameters</h3>
+            <div class="command">
+                <span class="flag">--mode</span>, <span class="flag">-m</span> <span class="param">MODE</span><br>
+                <span class="comment"># Sets the processing mode: simple, advanced, or detailed (default: simple)</span>
+            </div>
+            
+            <div class="command">
+                <span class="flag">--format</span>, <span class="flag">-f</span> <span class="param">FORMAT</span><br>
+                <span class="comment"># Sets the output format: json, xml, or text (default: text)</span>
+            </div>
+            
+            <h3>Optional Flags</h3>
+            <div class="command">
+                <span class="flag">--verbose</span>, <span class="flag">-v</span><br>
+                <span class="comment"># Enables verbose output for debugging</span>
+            </div>
+            
+            <div class="command">
+                <span class="flag">--force</span><br>
+                <span class="comment"># Overwrites output file without confirmation</span>
+            </div>
+            
+            <div class="command">
+                <span class="flag">--help</span>, <span class="flag">-h</span><br>
+                <span class="comment"># Displays help information</span>
+            </div>
+        </section>
+
+        <section id="examples">
+            <h2>Examples</h2>
+            
+            <h3>Basic Usage</h3>
+            <div class="command">
+                python main.py process <span class="param">data.txt</span> <span class="flag">--output</span> <span class="param">result.txt</span>
+            </div>
+            
+            <h3>Advanced Analysis</h3>
+            <div class="command">
+                python main.py analyze <span class="param">logfile.log</span> <span class="flag">--mode</span> <span class="param">detailed</span> <span class="flag">--format</span> <span class="param">json</span> <span class="flag">--verbose</span>
+            </div>
+            
+            <h3>Batch Processing</h3>
+            <div class="command">
+                python main.py batch <span class="param">input_folder/</span> <span class="flag">--output</span> <span class="param">output_folder/</span> <span class="flag">--format</span> <span class="param">xml</span> <span class="flag">--force</span>
+            </div>
+        </section>
+
+        <footer>
+            <p>&copy; 2023 Your App Name. All rights reserved.</p>
+            <p>Documentation generated on: September 13, 2023</p>
+        </footer>
+    </div>
+</body>
+</html>
